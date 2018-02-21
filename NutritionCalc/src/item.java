@@ -12,7 +12,7 @@ public class item
 		calories=0;
 	}
 	
-	public void additem(String itemName, String itemType, int calories)
+	public item(String itemName, String itemType, int calories)
 	{
 		this.itemName=itemName;
 		this.itemType=itemType;
