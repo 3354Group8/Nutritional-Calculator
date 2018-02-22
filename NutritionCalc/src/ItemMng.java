@@ -44,4 +44,13 @@ public class ItemMng
 			}
 		}
 	}
+	public int getTotalCalories()
+	{
+		int total=0;
+		for (int x=0; x<items.size();x++)
+		{
+			total+=items.get(x).getCalories();
+		}
+		return total;
+	}
 }
