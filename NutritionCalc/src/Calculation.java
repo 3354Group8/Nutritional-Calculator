@@ -1,10 +1,10 @@
 
-public class Calculation 
+public class calculation 
 {
 	private int calories;
 	private int dailyCalories;
-	private Goal cal;
-	private Item iCal;
+	private goal cal;
+	private item iCal;
 	
 	public int dailyCalc()
 	{

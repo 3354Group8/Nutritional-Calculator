@@ -1,10 +1,10 @@
 
-public class Goal
+public class goal
 {
 	private int caloriesGoal;
 	private int dailyCalories;
 	
-	public Goal()
+	public goal()
 	{
 		caloriesGoal=0;
 		dailyCalories=0;

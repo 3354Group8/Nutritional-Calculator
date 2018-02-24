@@ -1,17 +1,17 @@
 
-public class User
+public class user
 {
 	//vars
 	private String userID;
 	private String password;
 	
 	//constructor
-	public User()
+	public user()
 	{
 		userID=null;
 		password=null;
 	}
-	public User(String userID, String password)
+	public user(String userID, String password)
 	{
 		this.userID=userID;
 		this.password=password;
@@ -24,9 +24,9 @@ public class User
 	{
 		return password;
 	}
-	public User deepCopy()
+	public user deepCopy()
 	{
-		User data = new User(userID, password);
+		user data = new user(userID, password);
 		return data;
 	}
 }

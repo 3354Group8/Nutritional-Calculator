@@ -1,23 +1,23 @@
 
-public class Item
+public class item
 {
 	private String itemName;
 	private String itemType;
 	private int calories;
 	
-	public Item()
+	public item()
 	{		
 		itemName=null;
 		itemType=null;
 		calories=0;
 	}
-	public Item(String itemName, String itemType, int calories)
+	
+	public item(String itemName, String itemType, int calories)
 	{
 		this.itemName=itemName;
 		this.itemType=itemType;
 		this.calories=calories;
 	}
-	
 	public String getItemName()
 	{
 		return itemName;
