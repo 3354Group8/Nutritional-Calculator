@@ -1,31 +1,65 @@
 package edu.utd.nutritioncalc.managers;
 
-import java.sql.Date;
-import java.util.List;
+import edu.utd.nutritioncalc.domain.FoodItem;
 
-import edu.utd.nutritioncalc.domain.FoodEntry;
-import edu.utd.nutritioncalc.domain.User;
+import java.util.ArrayList;
 
-public class FoodTracker {
+public class FoodTracker 
+{
+	private ArrayList<FoodItem> list;
 	
-	public void addEntry(FoodEntry entry, User user){
-		
+	public FoodTracker()
+	{
+		list=new ArrayList<FoodItem>();
 	}
 	
-	public void updateEntry(FoodEntry entry){
-		
+	public void addItem(FoodItem food)
+	{
+		list.add(food);
 	}
 	
-	public void deleteEntry(FoodEntry entry){
-		
+	public int itemCount()
+	{
+		return list.size();
 	}
 	
-	public List<FoodEntry> getEntries(User user){
+	public FoodItem findItem(String str)
+	{
+		for(int x=0; x<list.size(); x++)
+		{
+			if(list.get(x).getName().equalsIgnoreCase(str))
+			{
+				return list.get(x);
+			}
+		}
 		return null;
 	}
 	
-	public List<FoodEntry> getEntries(User user, Date startDate, Date endDate){
-		return null;
+	public void editItem(FoodItem food, String str, int num1, int num2)
+	{
+		food.setName(str);
+		food.setCalories(num1);
+		food.setQuantity(num2);
 	}
-
+	
+	public void deleteItem(String str)
+	{
+		for(int x=0; x<list.size(); x++)
+		{
+			if(list.get(x).getName().equalsIgnoreCase(str))
+			{
+				list.remove(x);
+			}
+		}
+	}
+	
+	public int getTotalCalories()
+	{
+		int total=0;
+		for(int x=0; x<list.size(); x++)
+		{
+			total+=list.get(x).getTotalCalories();
+		}
+		return total;
+	}
 }
