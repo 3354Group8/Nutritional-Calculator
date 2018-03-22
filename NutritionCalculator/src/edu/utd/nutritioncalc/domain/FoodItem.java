@@ -1,27 +1,56 @@
 package edu.utd.nutritioncalc.domain;
 
-public class FoodItem {
-	
-	private String foodId;
+public class FoodItem 
+{
 	private String name;
-	private String calories;
-	public String getFoodId() {
-		return foodId;
+	private int calories;
+	private int quantity;
+	
+	public FoodItem()
+	{
+		name=null;
+		calories=0;
+		quantity=0;
 	}
-	public void setFoodId(String foodId) {
-		this.foodId = foodId;
+	public FoodItem(String str, int num1, int num2)
+	{
+		name=str;
+		calories=num1;
+		quantity=num2;
 	}
-	public String getName() {
+	
+	public String getName() 
+	{
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getCalories() {
-		return calories;
-	}
-	public void setCalories(String calories) {
-		this.calories = calories;
+	
+	public void setName(String str) 
+	{
+		name=str;
 	}
 	
+	public int getCalories() 
+	{
+		return calories;
+	}
+	
+	public void setCalories(int num) 
+	{
+		calories=num;
+	}
+	
+	public int getQuantity()
+	{
+		return quantity;
+	}
+	
+	public void setQuantity(int num)
+	{
+		quantity=num;
+	}
+	
+	public int getTotalCalories()
+	{
+		return quantity*calories;
+	}	
 }
