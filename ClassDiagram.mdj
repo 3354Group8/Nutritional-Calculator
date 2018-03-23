@@ -1254,11 +1254,10 @@
 											"_parent": {
 												"$ref": "AAAAAAFiVR0pg56tDiI="
 											},
-											"name": "weight",
+											"name": "int",
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "int",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -1270,11 +1269,10 @@
 											"_parent": {
 												"$ref": "AAAAAAFiVR0pg56tDiI="
 											},
-											"name": "days",
+											"name": "int",
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
-											"type": "int",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -2000,7 +1998,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+addGoal(weight: int, days: int)",
+											"text": "+addGoal(int, int)",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -14579,7 +14577,7 @@
 									"$ref": "AAAAAAFiVPnUJiy+nc4="
 								},
 								"visibility": "public",
-								"navigable": true,
+								"navigable": false,
 								"aggregation": "none",
 								"isReadOnly": false,
 								"isOrdered": false,
@@ -14694,7 +14692,7 @@
 									"$ref": "AAAAAAFiVPoA4i3yr8I="
 								},
 								"visibility": "public",
-								"navigable": true,
+								"navigable": false,
 								"aggregation": "none",
 								"isReadOnly": false,
 								"isOrdered": false,
@@ -14739,7 +14737,7 @@
 									"$ref": "AAAAAAFiVPoA4i3yr8I="
 								},
 								"visibility": "public",
-								"navigable": true,
+								"navigable": false,
 								"aggregation": "none",
 								"isReadOnly": false,
 								"isOrdered": false,
@@ -14910,7 +14908,7 @@
 									"$ref": "AAAAAAFiVPoA4i3yr8I="
 								},
 								"visibility": "public",
-								"navigable": true,
+								"navigable": false,
 								"aggregation": "none",
 								"isReadOnly": false,
 								"isOrdered": false,
