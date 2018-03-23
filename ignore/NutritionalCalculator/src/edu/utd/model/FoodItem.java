@@ -1,4 +1,4 @@
-package model;
+package edu.utd.model;
 
 public class FoodItem 
 {

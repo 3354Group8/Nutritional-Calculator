@@ -1,8 +1,8 @@
 package view;
 
-import controller.*;
-import model.DatabaseManager;
-import model.UserManager;
+import edu.utd.controller.*;
+import edu.utd.model.DatabaseManager;
+import edu.utd.model.UserManager;
 
 enum State {
 	LOGIN, USER, EXIT

@@ -1,7 +1,8 @@
 package view;
 
 import java.util.Scanner;
-import controller.UserController;
+
+import edu.utd.controller.UserController;
 
 public class LoginView
 {
@@ -13,7 +14,6 @@ public class LoginView
 		userCon = in_userCon;
 		in = new Scanner(System.in);
 	}
-	
 	
 	State run()
 	{

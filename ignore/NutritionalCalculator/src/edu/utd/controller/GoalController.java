@@ -1,6 +1,6 @@
-package controller;
-import model.DatabaseManager;
-import model.UserManager;
+package edu.utd.controller;
+import edu.utd.model.DatabaseManager;
+import edu.utd.model.UserManager;
 
 public class GoalController
 {
@@ -17,4 +17,5 @@ public class GoalController
 	{
 		return true;
 	}
+	
 }

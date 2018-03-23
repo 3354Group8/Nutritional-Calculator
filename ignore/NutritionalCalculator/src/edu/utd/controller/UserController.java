@@ -1,6 +1,6 @@
-package controller;
-import model.DatabaseManager;
-import model.UserManager;
+package edu.utd.controller;
+import edu.utd.model.DatabaseManager;
+import edu.utd.model.UserManager;
 
 public class UserController 
 {
@@ -31,5 +31,10 @@ public class UserController
 	public void saveUser() 
 	{
 		
+	}
+
+	public void view()
+	{
+		dbMan.getGoal(uMan.getUser().getUsername(), uMan);
 	}
 }

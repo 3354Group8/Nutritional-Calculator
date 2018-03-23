@@ -1,4 +1,4 @@
-package model;
+package edu.utd.model;
 import java.util.ArrayList;
 
 public class UserManager 
@@ -11,9 +11,19 @@ public class UserManager
 	{
 		foodEntries = new ArrayList<FoodEntry>();
 	}
-	
+
 	public void setUser(User in_user)
 	{ 
 		user = in_user; 
+	}
+	
+	public User getUser()
+	{ 
+		return user;
+	}
+	
+	public void setGoal(Goal goal)
+	{
+		
 	}
 }

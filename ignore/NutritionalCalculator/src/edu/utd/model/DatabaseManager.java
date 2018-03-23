@@ -1,4 +1,4 @@
-package model;
+package edu.utd.model;
 import java.io.*;
 import java.util.*;
 
@@ -12,7 +12,7 @@ public class DatabaseManager
 		    File inFile = new File(username);
 	
 		    Scanner sc = new Scanner (inFile);
-		    if(password.equals(sc.nextLine()))
+		    if(!password.equals(sc.nextLine()))
 		    	return -1;
 		    
 		    uMan.setUser(new User(username, password));
@@ -23,7 +23,7 @@ public class DatabaseManager
 			return -1;
 		}
 	}
-	
+
 	public boolean createUser(String username, String password)
 	{
 		try {
@@ -45,4 +45,22 @@ public class DatabaseManager
 	     	}
 		return false;
 	}
+	
+	public void getGoal(String username, UserManager uMan)
+	{
+		try {
+		    File inFile = new File(username);
+
+		    Scanner sc = new Scanner (inFile);
+		    sc.nextLine();
+		    
+		    System.out.println(sc.nextLine());
+		    sc.close();
+		    
+		} catch(IOException e) {
+			
+		}
+	}
+	
+	
 }

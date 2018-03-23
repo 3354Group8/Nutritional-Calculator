@@ -1,4 +1,4 @@
-package model;
+package edu.utd.model;
 
 import java.sql.Date;
 
