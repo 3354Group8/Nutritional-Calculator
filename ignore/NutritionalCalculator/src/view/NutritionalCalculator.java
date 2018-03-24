@@ -2,6 +2,7 @@ package view;
 
 import edu.utd.controller.*;
 import edu.utd.model.DatabaseManager;
+import edu.utd.model.FoodItemManager;
 import edu.utd.model.UserManager;
 
 enum State {
@@ -15,6 +16,7 @@ public class NutritionalCalculator
 	private GoalController goalCon;
 	private DatabaseManager dbMan;
 	private UserManager uMan;
+	private FoodItemManager fMan; 
 	
 	private State state;
 	
@@ -22,8 +24,9 @@ public class NutritionalCalculator
 	{
 		dbMan = new DatabaseManager();
 		uMan = new UserManager();
+		fMan = new FoodItemManager(dbMan);
 		foodCon = new FoodController(dbMan, uMan);
-		userCon = new UserController(dbMan, uMan);
+		userCon = new UserController(dbMan, uMan, fMan);
 		goalCon = new GoalController(dbMan, uMan);
 		state = State.LOGIN;
 	}

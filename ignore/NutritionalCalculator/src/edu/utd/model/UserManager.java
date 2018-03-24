@@ -22,9 +22,14 @@ public class UserManager
 		return user;
 	}
 
-	public void setGoal(Goal in_goal)
+	public void setGoal(Goal ingoal)
 	{
-		goal = in_goal;
+		goal = ingoal;
+	}
+	
+	public void setGoal(int duration, int cgoal)
+	{
+		goal = new Goal(duration, cgoal);
 	}
 	
 	

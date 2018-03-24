@@ -6,7 +6,35 @@ public class DatabaseManager
 {
 	public DatabaseManager() {}
 	
-	public int loadUser(String username, String password, UserManager uMan)
+	public ArrayList<FoodItem> loadItems()
+	{
+		try {
+		    File inFile = new File("FoodItems");
+	
+		    Scanner sc = new Scanner (inFile);
+		    
+		    String line = sc.nextLine();
+		    String[] itemTokens = line.split(" ");
+		    
+		    ArrayList<FoodItem> foodItems = new ArrayList<FoodItem>();
+		    int j = 1;
+		    for(int i = 0; i < itemTokens.length; i+=2)
+		    {
+		    	FoodItem item = new FoodItem(itemTokens[i], Integer.parseInt(itemTokens[j]));
+		    	foodItems.add(item);
+		    	//System.out.println(itemTokens[i] + " " + itemTokens[j]);
+		    	j+=2;
+		    }
+		    sc.close();
+		    
+		    return foodItems;
+		} catch(IOException e) {
+			return null;
+		}
+		
+	}
+
+	public int loadUser(String username, String password, UserManager uMan, FoodItemManager fMan)
 	{
 		try {
 		    File inFile = new File(username);
@@ -17,21 +45,27 @@ public class DatabaseManager
 		    
 		    uMan.setUser(new User(username, password));
 		    String line = sc.nextLine();
-		    
+		    if(line.length() > 2)
+		    {
 		    String[] goalTokens = line.split(" ");
 		    uMan.setGoal(new Goal(Integer.parseInt(goalTokens[0]), Integer.parseInt(goalTokens[1])));
-		    
+		    }
+		    if(sc.hasNextLine())
+		    {
 		    line = sc.nextLine();
 		    String[] entryTokens = line.split(" ");
 		    ArrayList<FoodEntry> foodEntries = new ArrayList<FoodEntry>();
 		    int i; int j = 1;
 		    for(i = 0; i < entryTokens.length; i+=2)
 		    {
-		    	foodEntries.add(new FoodEntry(entryTokens[i]), entryTokens[j]);
+		    	FoodItem item = fMan.find(entryTokens[i]);
+		    	FoodEntry entry = new FoodEntry(item, Integer.parseInt(entryTokens[j]));
+		    	foodEntries.add(entry);
 		    	j+=2;
 		    }
-		    uMan.setEntries(foodEntries);
 		    
+		    uMan.setEntries(foodEntries);
+		    }
 		    sc.close();
 		    
 		    return 1;

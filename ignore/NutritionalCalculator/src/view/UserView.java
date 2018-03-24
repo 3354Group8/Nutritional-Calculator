@@ -26,14 +26,13 @@ public class UserView
 				  "================================= \n"
 				+ "= Nutritional Calculator        = \n"
 				+ "================================= \n"
-				+ "= A - View                      = \n"
-				+ "= B - Add Entry                 = \n"
-				+ "= C - Delete Entry              = \n"
-				+ "= D - " + (goalCon.hasGoal() ? "Edit Goal" : "Add Goal ") + "                 = \n"
-				+ "= E - Save Current              = \n"
-				+ "= F - Load Old                  = \n"
-				+ "= G - Logout                    = \n"
-				+ "= H - Exit                      = \n"
+				+ "= A - Add Entry                 = \n"
+				+ "= B - Delete Entry              = \n"
+				+ "= C - " + (goalCon.hasGoal() ? "Edit Goal" : "Add Goal ") + "                 = \n"
+				+ "= D - Save Current              = \n"
+				+ "= E - Load Old                  = \n"
+				+ "= F - Logout                    = \n"
+				+ "= G - Exit                      = \n"
 				+ "================================= \n"
 				+ "  ? - ";
 			System.out.print(userViewText);
@@ -41,14 +40,13 @@ public class UserView
 			
 			switch(input)
 			{
-			case "A": 	return view();
-			case "B":	return addEntry();
-			case "C":	return deleteEntry();
-			case "D":	return editGoal();
-			case "E":	return save();
-			case "F":	return load();
-			case "G":	return logout();
-			case "H":	return State.EXIT;
+			case "A":	return addEntry();
+			case "B":	return deleteEntry();
+			case "C":	return editGoal();
+			case "D":	return save();
+			case "E":	return load();
+			case "F":	return logout();
+			case "G":	return State.EXIT;
 			default: 	System.out.println("\n Invalid Input"); 
 						return State.USER;
 			}
@@ -62,22 +60,64 @@ public class UserView
 	
 	private State addEntry()
 	{
-		userCon.loadUser();
+		userCon.addEntry();
+		System.out.println("Entries have been added");
 		return State.USER;
 	}
 	
 	private State deleteEntry()
 	{
-		
-		return State.LOGIN;
+		userCon.deleteEntry();
+		System.out.println("Entries have been deleted");
+		return State.USER;
 	}
 
 	private State editGoal()
 	{
+		String input1, input2;
+		int int1, int2;
+		do {
+			int1 = -1;
+			String loginText = ""
+					+ "================================= \n"
+					+ "= Duration in days:             = \n"
+					+ "= Leave blank to return to menu = \n"
+					+ "================================= \n"
+					+ "  ? - ";
+			System.out.print(loginText);
+			
+			input1 = in.nextLine();
+			try
+			{
+				int1 = Integer.parseInt(input1);
+			} catch(Exception e) {}
+		} while(int1 != -1);
+
+		if(input1.length() == 0)
+			return State.USER;
+		do {
+			int2 = -1;
+			String loginText = ""
+					+ "================================= \n"
+					+ "= Calorie Count:             = \n"
+					+ "= Leave blank to return to menu = \n"
+					+ "================================= \n"
+					+ "  ? - ";
+			System.out.print(loginText);
+			
+			input2 = in.nextLine();
+			try
+			{
+				int2 = Integer.parseInt(input1);
+			} catch(Exception e) {}
+		} while(int2 != -1);
 		
-		return State.LOGIN;
+		if(input2.length() == 0)
+			return State.USER;
+		goalCon.editGoal(int1, int2);
+		return State.USER;
 	}
-	
+		
 	private State save()
 	{
 		userCon.saveUser();

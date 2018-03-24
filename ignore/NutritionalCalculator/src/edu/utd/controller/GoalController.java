@@ -17,5 +17,10 @@ public class GoalController
 	{
 		return true;
 	}
-	
+
+	public boolean editGoal(int duration, int goal)
+	{
+		uMan.setGoal(duration, goal);
+		return true;
+	}
 }
