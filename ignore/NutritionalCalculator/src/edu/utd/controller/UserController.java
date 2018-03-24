@@ -25,7 +25,7 @@ public class UserController
 
 	public void loadUser() 
 	{
-		
+		int i = dbMan.loadUser(uMan.getUser().getUsername(), uMan.getUser().getPassword(), uMan);		
 	}
 
 	public void saveUser() 
@@ -35,6 +35,6 @@ public class UserController
 
 	public void view()
 	{
-		dbMan.getGoal(uMan.getUser().getUsername(), uMan);
+		
 	}
 }

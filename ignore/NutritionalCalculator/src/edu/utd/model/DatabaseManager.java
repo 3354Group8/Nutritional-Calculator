@@ -16,6 +16,22 @@ public class DatabaseManager
 		    	return -1;
 		    
 		    uMan.setUser(new User(username, password));
+		    String line = sc.nextLine();
+		    
+		    String[] goalTokens = line.split(" ");
+		    uMan.setGoal(new Goal(Integer.parseInt(goalTokens[0]), Integer.parseInt(goalTokens[1])));
+		    
+		    line = sc.nextLine();
+		    String[] entryTokens = line.split(" ");
+		    ArrayList<FoodEntry> foodEntries = new ArrayList<FoodEntry>();
+		    int i; int j = 1;
+		    for(i = 0; i < entryTokens.length; i+=2)
+		    {
+		    	foodEntries.add(new FoodEntry(entryTokens[i]), entryTokens[j]);
+		    	j+=2;
+		    }
+		    uMan.setEntries(foodEntries);
+		    
 		    sc.close();
 		    
 		    return 1;
@@ -44,22 +60,6 @@ public class DatabaseManager
 	 	        e.printStackTrace();
 	     	}
 		return false;
-	}
-	
-	public void getGoal(String username, UserManager uMan)
-	{
-		try {
-		    File inFile = new File(username);
-
-		    Scanner sc = new Scanner (inFile);
-		    sc.nextLine();
-		    
-		    System.out.println(sc.nextLine());
-		    sc.close();
-		    
-		} catch(IOException e) {
-			
-		}
 	}
 	
 	

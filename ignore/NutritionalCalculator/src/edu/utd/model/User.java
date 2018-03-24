@@ -15,11 +15,17 @@ public class User {
 		username = in_username;
 		password = in_password;
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}
 	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return username;
+	}
+	public void setPassword(String username) {
 		this.username = username;
 	}
 	public Date getDob() {
