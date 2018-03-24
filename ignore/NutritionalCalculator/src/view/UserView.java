@@ -26,7 +26,7 @@ public class UserView
 				  "================================= \n"
 				+ "= Nutritional Calculator        = \n"
 				+ "================================= \n"
-				+ "= A - Calculate                 = \n"
+				+ "= A - View                      = \n"
 				+ "= B - Add Entry                 = \n"
 				+ "= C - Delete Entry              = \n"
 				+ "= D - " + (goalCon.hasGoal() ? "Edit Goal" : "Add Goal ") + "                 = \n"
@@ -89,9 +89,9 @@ public class UserView
 		userCon.loadUser();
 		return State.USER;
 	}
+	
 	private State logout()
 	{
-		
 		return State.LOGIN;
 	}
 }

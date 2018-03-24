@@ -21,9 +21,25 @@ public class UserManager
 	{ 
 		return user;
 	}
-	
-	public void setGoal(Goal goal)
+
+	public void setGoal(Goal in_goal)
 	{
-		
+		goal = in_goal;
+	}
+	
+	
+	public Goal getGoal()
+	{ 
+		return goal;
+	}
+
+	public void setEntries(ArrayList<FoodEntry> in_foodEntries)
+	{ 
+		foodEntries = in_foodEntries; 
+	}
+	
+	public ArrayList<FoodEntry> getEntries()
+	{ 
+		return foodEntries;
 	}
 }

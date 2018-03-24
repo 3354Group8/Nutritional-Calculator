@@ -9,8 +9,17 @@ public class Goal {
 	private Date goalBeginDate;
 	private Date goalFinishDate;
 	private int goalBeginWeight;
+	
+	private int days;
 	private int goalFinishWeight;
 	private int goalDailyCalorie;
+	
+
+	public Goal(int in_goalFinishWeight, int in_days)
+	{
+		goalFinishWeight = in_goalFinishWeight;
+		days = in_days;
+	}
 	
 	public String getTitle() {
 		return title;
