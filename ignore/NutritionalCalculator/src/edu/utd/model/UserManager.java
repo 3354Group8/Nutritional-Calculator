@@ -31,8 +31,7 @@ public class UserManager
 	{
 		goal = new Goal(duration, cgoal);
 	}
-	
-	
+		
 	public Goal getGoal()
 	{ 
 		return goal;

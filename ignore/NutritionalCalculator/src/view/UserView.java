@@ -51,7 +51,7 @@ public class UserView
 						return State.USER;
 			}
 	}
-
+ 
 	private State view()
 	{
 		userCon.view();

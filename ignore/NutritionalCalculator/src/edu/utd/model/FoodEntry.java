@@ -10,4 +10,9 @@ public class FoodEntry
 		foodItem = in_foodItem;
 		quantity = in_quantity;
 	}
+	
+	public int getTotalCalories()
+	{
+		return foodItem.getCalories() * quantity;
+	}
 }
