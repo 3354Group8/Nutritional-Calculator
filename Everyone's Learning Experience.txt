@@ -1,0 +1,7 @@
+Please write a few sentences about what you have learned through this project. 
+The content here will be copied to the end of the Project document.
+
+Songyang Li:
+I learned about designing an application from scratch, using diagrams, use cases and everthing we learned in class.
+I understand the importance of keeping track of progress and version control. 
+While the coding was not extremely challenging, the important thing was how to design the project and convert the design to codes.
