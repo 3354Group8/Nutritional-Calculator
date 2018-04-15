@@ -5,3 +5,6 @@ Songyang Li:
 I learned about designing an application from scratch, using diagrams, use cases and everthing we learned in class.
 I understand the importance of keeping track of progress and version control. 
 While the coding was not extremely challenging, the important thing was how to design the project and convert the design to codes.
+
+Ryan Lira:
+A lot of the difficulty of the project was organizing all of our schedules and responsibilities. With a group of six people, there was no single time slot when everybody could meet up each week, and, after the mess that was the first iteration, we had to work hard to not let the entire group fall into disarray. Software engineering is a lot of tuning and tweaking, which is difficult for any one person to do, but each piece of the project would also require some knowledge of the whole system, which is difficult to establish with a group. We learned to manage this, get everybody to understand how the system worked, and we even learned how to distribute this work evenly and effortlessly so that new additions were painless.
