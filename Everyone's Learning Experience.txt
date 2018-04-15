@@ -8,3 +8,6 @@ While the coding was not extremely challenging, the important thing was how to d
 
 Ryan Lira:
 A lot of the difficulty of the project was organizing all of our schedules and responsibilities. With a group of six people, there was no single time slot when everybody could meet up each week, and, after the mess that was the first iteration, we had to work hard to not let the entire group fall into disarray. Software engineering is a lot of tuning and tweaking, which is difficult for any one person to do, but each piece of the project would also require some knowledge of the whole system, which is difficult to establish with a group. We learned to manage this, get everybody to understand how the system worked, and we even learned how to distribute this work evenly and effortlessly so that new additions were painless.
+
+Thiphavanh Phoutthivongsack:
+I learned that time management is really important when it come to a group project. When having a big group, getting everyone together to work on the project. Having a big group, I've learn how to move my schedule around to beable to go to the group meeting. With project design, I've learned how to design a software, and how each step from the requirements and use cases, to sequence diagrams and class diagrams are depending on each other. When all of those diagrams are matching it make coding to not be challenging. 
